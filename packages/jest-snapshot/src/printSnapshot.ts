@@ -61,7 +61,7 @@ export const getSnapshotColorForChalkInstance = (
     return chalkInstance.ansi256(aForeground2).bgAnsi256(aBackground2);
   }
 
-  return chalkInstance.magenta.bgYellowBright;
+  return chalkInstance.white.bgRed;
 };
 
 export const getReceivedColorForChalkInstance = (
@@ -79,7 +79,7 @@ export const getReceivedColorForChalkInstance = (
     return chalkInstance.ansi256(bForeground2).bgAnsi256(bBackground2);
   }
 
-  return chalkInstance.black.bgCyan;
+  return chalkInstance.black.bgGreen;
 };
 
 export const aSnapshotColor = getSnapshotColorForChalkInstance(chalk);
