@@ -39,8 +39,8 @@ import {serialize} from '../utils';
 
 const aOpenForeground1 = styles.magenta.open;
 const aOpenBackground1 = styles.bgYellowBright.open;
-const bOpenForeground1 = styles.cyan.open;
-const bOpenBackground1 = styles.bgWhiteBright.open;
+const bOpenForeground1 = styles.black.open;
+const bOpenBackground1 = styles.bgCyan.open;
 
 const aOpenForeground2 = styles.color.ansi256(aForeground2);
 const bOpenForeground2 = styles.color.ansi256(bForeground2);
@@ -101,6 +101,7 @@ const convertAnsi = (val: string): string => {
         return '<t>'; // teal/cyan/aqua
       case styles.yellow.open:
         return '<y>';
+      case styles.black.close:
       case styles.cyan.close:
       case styles.green.close:
       case styles.magenta.close:
